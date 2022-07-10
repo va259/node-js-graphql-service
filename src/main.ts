@@ -1,17 +1,21 @@
 import 'dotenv/config';
 import { ApolloServer } from 'apollo-server';
 import {genreTypeDefs, genreResolvers, GenreAPI,
-  artistTypeDefs, artistResolvers, ArtistAPI } from '.';
+  artistTypeDefs, artistResolvers, ArtistAPI,
+  bandTypeDefs, bandResolvers, BandAPI
+} from '.';
 
 const PORT = process.env.PORT;
 export const server = new ApolloServer({
   typeDefs: [
     genreTypeDefs,
     artistTypeDefs,
+    bandTypeDefs
   ],
   resolvers: [
     genreResolvers,
     artistResolvers,
+    bandResolvers
   ],
   csrfPrevention:true,
   cache: 'bounded',
@@ -19,6 +23,7 @@ export const server = new ApolloServer({
     return {
       genreAPI: new GenreAPI(),
       artistAPI: new ArtistAPI(),
+      BandAPI: new BandAPI(),
     }
   },
   context: ({ req }) => {

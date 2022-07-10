@@ -6,6 +6,10 @@ import { ArtistAPI } from './modules/artists/datasources/artist.api';
 import { artistResolvers } from './modules/artists/resolvers/artist.resolver';
 import { artistTypeDefs } from './modules/artists/schemas/artist.schema';
 
-export { genreTypeDefs, artistTypeDefs };
-export { GenreAPI, ArtistAPI };
-export { genreResolvers, artistResolvers };
+import { BandAPI } from './modules/bands/datasources/band.api';
+import { bandResolvers } from './modules/bands/resolvers/band.resolver';
+import { bandTypeDefs } from './modules/bands/schemas/band.schema';
+
+export { genreTypeDefs, artistTypeDefs, bandTypeDefs };
+export { GenreAPI, ArtistAPI, BandAPI };
+export { genreResolvers, artistResolvers, bandResolvers };
