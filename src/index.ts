@@ -10,6 +10,10 @@ import { BandAPI } from './modules/bands/datasources/band.api';
 import { bandResolvers } from './modules/bands/resolvers/band.resolver';
 import { bandTypeDefs } from './modules/bands/schemas/band.schema';
 
-export { genreTypeDefs, artistTypeDefs, bandTypeDefs };
-export { GenreAPI, ArtistAPI, BandAPI };
-export { genreResolvers, artistResolvers, bandResolvers };
+import { UserAPI } from './modules/users/datasources/user.api';
+import { userResolvers } from './modules/users/resolvers/user.resolver';
+import { userTypeDefs } from './modules/users/schemas/user.schema';
+
+export { genreTypeDefs, artistTypeDefs, bandTypeDefs, userTypeDefs };
+export { GenreAPI, ArtistAPI, BandAPI, UserAPI };
+export { genreResolvers, artistResolvers, bandResolvers, userResolvers };
