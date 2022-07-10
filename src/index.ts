@@ -18,6 +18,10 @@ import { TrackAPI } from './modules/tracks/datasources/track.api';
 import { trackResolvers } from './modules/tracks/resolvers/track.resolver';
 import { trackTypeDefs } from './modules/tracks/schemas/track.schema';
 
-export { genreTypeDefs, artistTypeDefs, bandTypeDefs, userTypeDefs, trackTypeDefs };
-export { GenreAPI, ArtistAPI, BandAPI, UserAPI, TrackAPI };
-export { genreResolvers, artistResolvers, bandResolvers, userResolvers, trackResolvers };
+import { AlbumAPI } from './modules/albums/datasources/album.api';
+import { albumResolvers } from './modules/albums/resolvers/album.resolver';
+import { albumTypeDefs } from './modules/albums/schemas/album.schema';
+
+export { genreTypeDefs, artistTypeDefs, bandTypeDefs, userTypeDefs, trackTypeDefs, albumTypeDefs };
+export { GenreAPI, ArtistAPI, BandAPI, UserAPI, TrackAPI, AlbumAPI };
+export { genreResolvers, artistResolvers, bandResolvers, userResolvers, trackResolvers, albumResolvers };
