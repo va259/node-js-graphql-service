@@ -22,6 +22,10 @@ import { AlbumAPI } from './modules/albums/datasources/album.api';
 import { albumResolvers } from './modules/albums/resolvers/album.resolver';
 import { albumTypeDefs } from './modules/albums/schemas/album.schema';
 
-export { genreTypeDefs, artistTypeDefs, bandTypeDefs, userTypeDefs, trackTypeDefs, albumTypeDefs };
-export { GenreAPI, ArtistAPI, BandAPI, UserAPI, TrackAPI, AlbumAPI };
-export { genreResolvers, artistResolvers, bandResolvers, userResolvers, trackResolvers, albumResolvers };
+import { FavouriteAPI } from './modules/favourites/datasources/favourite.api';
+import { favouriteResolvers } from './modules/favourites/resolvers/favourite.resolver';
+import { favouriteTypeDefs } from './modules/favourites/schemas/favourite.schema';
+
+export { genreTypeDefs, artistTypeDefs, bandTypeDefs, userTypeDefs, trackTypeDefs, albumTypeDefs, favouriteTypeDefs };
+export { GenreAPI, ArtistAPI, BandAPI, UserAPI, TrackAPI, AlbumAPI, FavouriteAPI };
+export { genreResolvers, artistResolvers, bandResolvers, userResolvers, trackResolvers, albumResolvers, favouriteResolvers };
