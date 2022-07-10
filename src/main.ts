@@ -4,6 +4,7 @@ import {genreTypeDefs, genreResolvers, GenreAPI,
   artistTypeDefs, artistResolvers, ArtistAPI,
   bandTypeDefs, bandResolvers, BandAPI,
   userTypeDefs, userResolvers, UserAPI,
+  trackTypeDefs, trackResolvers, TrackAPI,
 } from '.';
 
 const PORT = process.env.PORT;
@@ -13,12 +14,14 @@ export const server = new ApolloServer({
     artistTypeDefs,
     bandTypeDefs,
     userTypeDefs,
+    trackTypeDefs
   ],
   resolvers: [
     genreResolvers,
     artistResolvers,
     bandResolvers,
     userResolvers,
+    trackResolvers
   ],
   csrfPrevention:true,
   cache: 'bounded',
@@ -28,6 +31,7 @@ export const server = new ApolloServer({
       artistAPI: new ArtistAPI(),
       bandAPI: new BandAPI(),
       userAPI: new UserAPI(),
+      trackAPI: new TrackAPI(),
     }
   },
   context: ({ req }) => {
