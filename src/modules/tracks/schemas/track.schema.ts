@@ -13,7 +13,7 @@ export const trackTypeDefs = gql`
   }
 
   type Query {
-    tracks(offset: Int, limit: Int): [Track]!
+    tracks(offset: Int!, limit: Int!): [Track]!
     track(id: ID!): Track
   }
 

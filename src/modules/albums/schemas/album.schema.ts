@@ -13,7 +13,7 @@ export const albumTypeDefs = gql`
   }
 
   type Query {
-    albums(offset: Int, limit: Int): [Album]!
+    albums(offset: Int!, limit: Int!): [Album]!
     album(id: ID!): Album
   }
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/main.ts",
   "scripts": {
-    "start": "npm run build && node dist/main",
+    "start": "npm run build && node dist/src/main.js",
     "start:dev": "nodemon src/main.ts",
     "build": "tsc"
   },

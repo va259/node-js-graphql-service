@@ -14,7 +14,7 @@ export const artistTypeDefs = gql`
   }
 
   type Query {
-    artists(offset: Int, limit: Int): [Artist]!
+    artists(offset: Int!, limit: Int!): [Artist]!
     artist(id: ID!): Artist
 }
 
