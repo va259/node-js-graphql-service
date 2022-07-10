@@ -19,4 +19,9 @@ export class UserAPI extends RESTDataSource {
     const user = await this.post('/register', body);
     return user;
   }
+
+  async verify() {
+    const user = await this.post('/verify');
+    return user;
+  }
 }

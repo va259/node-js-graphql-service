@@ -4,8 +4,9 @@ export const artistResolvers = {
   Artist: { id: (parent: any) => parent._id },
 
   Query: {
-    artists: (_: undefined, __: undefined, { dataSources }: { dataSources: any }) => {
-      return dataSources.artistAPI.getArtists()
+    artists: (_: undefined, { offset, limit }: { offset: number, limit: number },
+      { dataSources }: { dataSources: any }) => {
+      return dataSources.artistAPI.getArtists(offset, limit)
     },
 
     artist: (_: undefined, { id }: { id: string }, { dataSources }: { dataSources: any }) => {

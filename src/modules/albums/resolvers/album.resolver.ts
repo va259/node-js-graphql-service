@@ -30,8 +30,9 @@ export const albumResolvers = {
   },
 
   Query: {
-    albums: (_: undefined, __: undefined, { dataSources }: { dataSources: any }) => {
-      return dataSources.albumAPI.getAlbums()
+    albums: (_: undefined, { offset, limit }: { offset: number, limit: number },
+      { dataSources }: { dataSources: any }) => {
+      return dataSources.albumAPI.getAlbums(offset, limit)
     },
 
     album: (_: undefined, { id }: { id: string }, { dataSources }: { dataSources: any }) => {

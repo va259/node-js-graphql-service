@@ -4,8 +4,9 @@ export const genreResolvers = {
   Genre: { id: (parent: any) => parent._id },
 
   Query: {
-    genres: (_: undefined, __: undefined, { dataSources }: { dataSources: any }) => {
-      return dataSources.genreAPI.getGenres()
+    genres: (_: undefined, { offset, limit }: { offset: number, limit: number },
+      { dataSources }: { dataSources: any }) => {
+      return dataSources.genreAPI.getGenres(offset, limit);
     },
 
     genre: (_: undefined, { id }: { id: string }, { dataSources }: { dataSources: any }) => {

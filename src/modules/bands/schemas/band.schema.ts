@@ -20,7 +20,7 @@ type Band {
   }
 
   type Query {
-    bands: [Band]!
+    bands(offset: Int, limit: Int): [Band]!
     band(id: ID!): Band
   }
 

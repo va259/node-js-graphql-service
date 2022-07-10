@@ -10,8 +10,8 @@ export const genreTypeDefs = gql`
   }
 
   type Query {
+    genres(offset: Int, limit: Int): [Genre]!
     genre(id: ID!): Genre
-    genres: [Genre]!
   }
 
   type Mutation {

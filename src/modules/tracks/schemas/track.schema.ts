@@ -13,8 +13,8 @@ export const trackTypeDefs = gql`
   }
 
   type Query {
+    tracks(offset: Int, limit: Int): [Track]!
     track(id: ID!): Track
-    tracks: [Track]!
   }
 
   type Mutation {
@@ -49,4 +49,8 @@ export const trackTypeDefs = gql`
     message: String!
     track: Track
   }
+
+  # interface Track {
+
+  # }
 `

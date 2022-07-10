@@ -28,8 +28,9 @@ export const bandResolvers = {
   },
 
   Query: {
-    bands: (_: undefined, __: undefined, { dataSources }: { dataSources: any }) => {
-      return dataSources.bandAPI.getBands()
+    bands: (_: undefined, { offset, limit }: { offset: number, limit: number },
+      { dataSources }: { dataSources: any }) => {
+      return dataSources.bandAPI.getBands(offset, limit);
     },
 
     band: (_: undefined, { id }: { id: string }, { dataSources }: { dataSources: any }) => {
@@ -91,15 +92,15 @@ export const bandResolvers = {
         return {
           code: 200,
           success: true,
-          message: `Band was successfully deleted: ${id}`,
-          band: null
+          message: `Band was successfully deleted`,
+          id
         };
       } catch (err: any) {
         return {
           code: err.extensions.response.status,
           success: false,
           message: err.extensions.response.body,
-          band: null
+          id: null
         };
       }
     }

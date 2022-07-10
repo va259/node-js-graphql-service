@@ -5,18 +5,18 @@ export const trackResolvers = {
     id: (parent: any) => parent._id,
 
     album({ albumId }: any, _: undefined, { dataSources }: { dataSources: any }) {
-      return dataSources.albumsAPI.getGenreById(albumId);
+      return dataSources.albumAPI.getAlbumById(albumId);
     },
 
     async bands({ bandsIds }: any, _: undefined, { dataSources }: { dataSources: any }) {
       return (await Promise.all(bandsIds.map(async (bandsId: string) => {
-        return dataSources.bandsAPI.getGenreById(bandsId)
+        return dataSources.bandAPI.getBandById(bandsId)
       }))).map((band: any) => ({...band}))
     },
 
     async artists({ artistsIds }: any, _: undefined, { dataSources }: { dataSources: any }) {
       return (await Promise.all(artistsIds.map(async (artistId: string) => {
-        return dataSources.artistAPI.getGenreById(artistId)
+        return dataSources.artistAPI.getArtistById(artistId)
       }))).map((artist: any) => ({...artist}))
     },
 
@@ -28,8 +28,9 @@ export const trackResolvers = {
   },
 
   Query: {
-    tracks: (_: undefined, __: undefined, { dataSources }: { dataSources: any }) => {
-      return dataSources.trackAPI.getTracks()
+    tracks: (_: undefined, { offset, limit }: { offset: number, limit: number },
+      { dataSources }: { dataSources: any }) => {
+      return dataSources.trackAPI.getTracks(offset, limit);
     },
 
     track: (_: undefined, { id }: { id: string }, { dataSources }: { dataSources: any }) => {
