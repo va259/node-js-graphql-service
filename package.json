@@ -1,0 +1,35 @@
+{
+  "name": "js-graphql-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/main.ts",
+  "scripts": {
+    "start": "npm run build && node dist/src/main.js",
+    "start:dev": "nodemon src/main.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/va259/node-js-graphql-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/va259/node-js-graphql-service/issues"
+  },
+  "homepage": "https://github.com/va259/node-js-graphql-service#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.1",
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.6.1",
+    "apollo-server": "^3.9.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0"
+  }
+}
