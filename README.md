@@ -70,7 +70,12 @@ Go to http://localhost:4000/ and click on 'Query your server' button to launch A
   ```
 </details>
 
-You'll need to have your user logged in to test all available queries and mutations.
+You'll need to have your user logged in to test all available queries and mutations. In order to login you need to pass jwt token to a header:
+```
+Authorization : Bearer YOUR JWT TOKEN
+```
+
+To get a jwt token perform:
 
 Login Query (get jwt token) (GrapQL format):
 ```graphql
