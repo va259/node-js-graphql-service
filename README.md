@@ -21,52 +21,52 @@ Go to http://localhost:4000/ and click on 'Query your server' button to launch A
 <details>
   <summary>Implemented queries:</summary>
   ```
-  artist  
-  artists  
-  genre  
-  genres  
-  track  
-  tracks  
-  band  
-  bands  
-  album  
-  albums  
-  jwt  
-  user  
-  favourites (available only for logged in user)  
+  - artist
+  - artists
+  - genre
+  - genres
+  - track
+  - tracks
+  - band
+  - bands
+  - album
+  - albums
+  - jwt
+  - user
+  - favourites (available only for logged in user)
   ```
 </details>
 
 <details>
   <summary>Implemented mutations:</summary>
   ```
-  - Artists  
-  createArtist  
-  deleteArtist  
-  updateArtist  
-  - Genres  
-  createGenre  
-  deleteGenre  
-  updateGenre  
-  - Bands  
-  createBand  
-  deleteBand  
-  updateBand  
-  - Tracks  
-  createTrack  
-  deleteTrack  
-  updateTrack  
-  - Albums  
-  createAlbum  
-  deleteAlbum  
-  updateAlbum  
-  - Users  
-  register  
-  - Favourites  
-  addTrackToFavourites  
-  addBandToFavourites  
-  addArtistToFavourites  
-  addGenreToFavourites  
+  - Artists
+    - createArtist
+    - deleteArtist
+    - updateArtist
+  - Genres
+    - createGenre
+    - deleteGenre
+    - updateGenre
+  - Bands
+    - createBand
+    - deleteBand
+    - updateBand
+  - Tracks
+    - createTrack
+    - deleteTrack
+    - updateTrack
+  - Albums
+    - createAlbum
+    - deleteAlbum
+    - updateAlbum
+  - Users
+    - register
+  - Favourites
+    - addTrackToFavourites
+    - addBandToFavourites
+    - addArtistToFavourites
+    - addGenreToFavourites
   ```
 </details>
 
